@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Romance Fatal Serif Std';
+    src: url('RomanceFatalSerifStd.woff2') format('woff2'),
+        url('RomanceFatalSerifStd.woff') format('woff'),
+        url('RomanceFatalSerifStd.svg#RomanceFatalSerifStd') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

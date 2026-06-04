@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta author="Miriam">
+  <title>Horari Pastel</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif;}
+    th, td { border: 1px solid #ccc; padding: 10px; width: 150px; transition: transform 0.2s;}
+    th { background-color: #e0cfff; }
+    td.hora { font-weight: bold;width: 80px;background-color: #f2e6ff;}
+    .MO100 { background-color: #d9b3ff; }
+    .MO200 { background-color: #c299ff; }
+    .IPO { background-color: #b380ff; }
+    .MP1480 { background-color: #e6ccff; }
+    .MP1484 { background-color: #d1a3ff; }
+    .MP1485 { background-color: #c699ff; }
+    .MP1665 { background-color: #dfb3ff; }
+    .Tutoria { background-color: #ffccf2; }
+    .Patio { background-color: #c1b3c4; }
+    td:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+  <h2 style="text-align:center; color:#7f3fbf;">Horari Setmanal</h2>
+  <table>
+    <tr>
+      <th class="hora">Hora</th>
+      <th>Dilluns</th>
+      <th>Dimarts</th>
+      <th>Dimecres</th>
+      <th>Dijous</th>
+      <th>Divendres</th>
+    </tr>
+
+    <tr>
+      <td class="hora">15:00 - 16:00</td>
+      <td class="MO100" rowspan="3">MO 100</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="MO200">MO 200</td>
+    </tr>
+
+    <tr>
+      <td class="hora">16:00 - 17:00</td>
+      <td class="IPO" rowspan="2">1710 IPO</td>
+      <td class="MP1480">1480 MP</td>
+      <td class="MP1484" rowspan="2">1484 MP</td>
+      <td class="MP1485" rowspan="2">1485 MP</td>
+    </tr>
+
+    <tr>
+      <td class="hora">17:00 - 18:00</td>
+      <td class="Tutoria">Tutoria</td>
+    </tr>
+
+    <tr>
+      <td class="hora">18:00 - 18:30</td>
+      <td class="Patio" colspan="5">Pati</td>
+    </tr>
+
+    <tr>
+      <td class="hora">18:30 - 19:30</td>
+      <td class="MP1480" rowspan="2">1480 MP</td>
+      <td class="MP1485" rowspan="2">1485 MP</td>
+      <td class="MP1485" rowspan="2">1485 MP</td>
+      <td class="MP1484">1484 MP</td>
+      <td class="MP1485" rowspan="2">1485 MP</td>
+    </tr>
+
+    <tr>
+      <td class="hora">19:30 - 20:30</td>
+      <td class="MP1665">1665 MP</td>
+      <td></td> 
+      
+    </tr>
+
+  </table>
+</body>
+</html>

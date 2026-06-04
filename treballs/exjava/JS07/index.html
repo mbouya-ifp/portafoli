@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS07</title>
+    <style> 
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: ;
+       
+        }
+
+        #sol {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: rgb(246, 234, 123);
+            display: inline-block;
+            margin: 1rem;
+            float: left;
+        }
+
+        #lluna {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            box-shadow: 0.5rem 0rem 0 silver;
+            display: inline-block;
+            margin: 1rem;
+            float: left;
+
+
+        }
+
+        ul {
+            display: inline-block;
+            margin: 1rem;
+            float: right;
+            margin: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin: 1rem;
+            font-size: 2rem; 
+        }
+
+        #txt {
+            width: 40rem;
+            margin: 3rem auto 1rem auto;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div id="sol"></div>
+    <div id="lluna"></div>
+
+    <ul>
+        <li id="a">A</li>
+        <li id="aa">AA</li>
+        <li id="aaa">AAA</li>
+
+    </ul>
+
+    <p id="txt">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed illum, delectus voluptate beatae praesentium temporibus doloribus accusantium architecto. Facere laborum cumque harum omnis aperiam laboriosam quis dolorem ut nihil ab.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed illum, delectus voluptate beatae praesentium temporibus doloribus accusantium architecto. Facere laborum cumque harum omnis aperiam laboriosam quis dolorem ut nihil ab.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed illum, delectus voluptate beatae praesentium temporibus doloribus accusantium architecto. Facere laborum cumque harum omnis aperiam laboriosam quis dolorem ut nihil ab.</p>
+
+        <script type="text/javascript" language="javascript">
+
+
+            // definim els events
+            document.getElementById('sol').addEventListener('click', sol);
+            document.getElementById('lluna').addEventListener('click', lluna);
+            
+
+            //creem les funcions
+
+            function sol() {
+                document.body.style.backgroundColor='white';
+                document.body.style.color="black";
+                document.getElementById('a').style.color="black";
+                document.getElementById('aa').style.color="black";
+                document.getElementById('aaa').style.color="black";
+                
+            }
+
+
+             function lluna() {
+                document.body.style.backgroundColor='black';
+                document.body.style.color="white";
+                document.getElementById('a').style.color="white";
+                document.getElementById('aa').style.color="white";
+                document.getElementById('aaa').style.color="white";
+
+
+
+            }
+
+            ////////////////////////////////////
+
+            // definim els events
+            document.getElementById('a').addEventListener('click', reduir);
+            document.getElementById('aa').addEventListener('click', normal);
+            document.getElementById('aaa').addEventListener('click', augmentar);
+
+            // creem les funcions
+                function reduir() {
+                    document.getElementById('txt').style.fontSize="0.5rem";
+                }
+    
+                function normal() {
+                    document.getElementById('txt').style.fontSize="1rem";
+                }
+
+                function augmentar() {
+                    document.getElementById('txt').style.fontSize="2rem";
+                }
+
+
+        </script>
+</body>
+</html>

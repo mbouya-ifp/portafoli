@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS06</title>
+
+<style>
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 7rem;
+        line-height: 20rem;
+        color: white;
+    }
+
+    #verd, #vermell, #taronja {
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        border: 2px solid black;
+        margin: 1rem;
+        box-sizing: border-box;
+    }
+
+    #verd {
+        background-color: green;
+    }
+
+    #vermell {
+        background-color: red;
+    }
+
+    #taronja {
+        background-color: orange;
+    }
+
+    ul {
+        width: 100%;
+        margin: 0;
+        padding: 10px 5px;
+        list-style-type: none;
+        background-color: rgb(82, 80, 80);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    #txt {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        overflow: hidden;
+    }
+</style>
+</head>
+
+<body>
+
+    <ul>
+        <li id="verd"></li>
+        <li id="taronja"></li>
+        <li id="vermell"></li>
+    </ul>
+
+    <p id="txt"></p>
+
+<script>
+
+    document.getElementById('verd').addEventListener('click', verd);
+    document.getElementById('taronja').addEventListener('click', taronja);
+    document.getElementById('vermell').addEventListener('click', vermell);
+
+    function resetSemafor() {
+        document.getElementById('verd').style.border = "solid 10px transparent";
+        document.getElementById('taronja').style.border = "solid 10px transparent";
+        document.getElementById('vermell').style.border = "solid 10px transparent";
+
+        document.getElementById('verd').style.boxShadow = "none";
+        document.getElementById('taronja').style.boxShadow = "none";
+        document.getElementById('vermell').style.boxShadow = "none";
+    }
+
+    function verd() {
+        resetSemafor();
+
+        document.body.style.backgroundColor = 'green';
+        document.getElementById('txt').innerHTML = "ENDAVANT";
+
+        document.getElementById('verd').style.border = "solid 10px white";
+        document.getElementById('verd').style.boxShadow =
+            "inset 20px 20px 20px rgba(255,255,255,0.4)";
+    }
+
+    function taronja() {
+        resetSemafor();
+
+        document.body.style.backgroundColor = 'orange';
+        document.getElementById('txt').innerHTML = "PRECAUCIÓ";
+
+        document.getElementById('taronja').style.border = "solid 10px white";
+        document.getElementById('taronja').style.boxShadow =
+            "inset 20px 20px 20px rgba(0,0,225,0.5)";
+    }
+
+    function vermell() {
+        resetSemafor();
+
+        document.body.style.backgroundColor = 'red';
+        document.getElementById('txt').innerHTML = "STOP";
+
+        document.getElementById('vermell').style.border = "solid 10px white";
+        document.getElementById('vermell').style.boxShadow =
+            "inset 20px 20px 20px rgba(255,0,225,0.5)";
+    }
+
+</script>
+
+</body>
+</html>

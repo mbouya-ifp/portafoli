@@ -1,0 +1,215 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color: rgb(158, 33, 33);
+    text-align: center;
+    text-shadow: 1px 1px 4px grey;
+}
+
+.contenidor {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.cap {
+    height: 120px;
+}
+
+.cos {
+    height: 800px;
+    overflow: auto;
+}
+
+.peu {
+    clear: both;
+    background-color: black;
+    height: 300px;
+}
+
+li {
+    background-color: white;
+    height: 50px;
+    width: 180px;
+    margin: 10px;
+    float: left;
+}
+
+.esquerra,
+.centre,
+.dreta {
+    float: left;
+}
+
+.esquerra,
+.dreta {
+    width: 20%;
+}
+
+.centre {
+    background-color: rgb(217, 177, 177);
+    width: 60%;
+    height: 600px;
+    overflow: auto;
+    color: white;
+}
+
+p {
+    text-indent: 50px;
+    padding: 10px;
+}
+
+.menuhorizontal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuhorizontal li {
+    text-align: center;
+    line-height: 50px;
+}
+
+.menuhorizontal a {
+    text-decoration: none;
+    color: rgb(158, 33, 33);
+    font-weight: bold;
+}
+
+/* MENU HAMBURGUESA */
+
+#alternador {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all .5s ease;
+    z-index: 1000;
+}
+
+#alternador label {
+    width: 5rem;
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding-top: 1rem;
+}
+
+b {
+    display: block;
+    width: 4rem;
+    height: 0.5rem;
+    background: black;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+#alternador ul {
+    margin-top: 3rem;
+    width: 12rem;
+    padding: 0;
+}
+
+#alternador li {
+    list-style-type: none;
+    border: solid 2px white;
+    border-radius: 0.5rem;
+    line-height: 3rem;
+    text-align: center;
+    transition: 0.4s;
+    float: none;
+    background-color: rgb(217, 177, 177);
+    height: 50px;
+    width: 180px;
+    margin: 10px;
+}
+
+#alternador a {
+    color: rgb(158, 33, 33);
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#alternador a:hover {
+    color: black;
+}
+
+#alternador li:hover {
+    background: pink;
+}
+
+.desplega {
+    position: absolute;
+    left: -25rem;
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+#alternador input[type=checkbox]:checked + label ~ .desplega {
+    left: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    #alternador {
+        display: block;
+    }
+
+    .menuhorizontal {
+        display: none;
+    }
+
+    .esquerra,
+    .centre,
+    .dreta {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1279px) {
+
+    #alternador {
+        display: block;
+    }
+
+    .menuhorizontal {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    #alternador {
+        display: none;
+    }
+
+    .menuhorizontal {
+        display: block;
+    }
+}

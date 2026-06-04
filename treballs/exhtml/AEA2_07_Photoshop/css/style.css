@@ -1,0 +1,283 @@
+body {
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(24, 33, 60);
+    border-radius: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(38, 112, 204);
+    font-size: 140px;
+    font-weight: bold;
+    align-content: center;
+    letter-spacing: -5px;
+    line-height: 200px;
+    text-align: center;
+    margin:auto;
+}
+
+.contenidor {
+    width: 1100px;
+    margin: 50px auto;
+}
+.efecte {
+    width: 200px;
+    margin: 10px;
+    float: left;
+    height: 250px;
+
+}
+
+.efecte img {
+    width: 200px;
+}
+
+.efecte p {
+    text-align: center;
+
+}
+
+.efecte input {
+    width: 200px;
+}
+
+
+.desenfocar img {
+    filter: blur(10px);
+    -webkit-filter:blur(10px)
+        -moz-filter:blur(10px)
+            -o-filter:blur(10px)
+            filter:blur(10px)
+
+}
+
+.grisos img {
+    filter: grayscale(100%);
+}
+
+.ombra img {
+    filter: drop-shadow(6px 6px 6px purple)
+
+}
+
+.sepia img {
+    filter: sepia(100%);
+}
+
+.lluminositat img {
+    filter:brightness(200%);
+}
+
+.contrast img {
+    filter:contrast(40%);
+}
+
+.to {
+    filter: hue-rotate(90deg);
+}
+.invertir {
+    filter: invert(100%)
+}
+
+.saturar {
+    filter: saturate(150%);
+}
+
+.opacitat {
+    filter: opacity(50%);
+}
+
+h1 {
+    font-size: 48px;
+    background: #ccc;
+    clear: both;
+}
+
+.fruita {
+    background-image:url(../img/strawberry-png-24.png);
+    width: 200px;
+    height: 200px;
+    background-size: 100%;
+    background-repeat: no repeat;
+    background-position: center;
+    margin: auto;
+}
+
+.superposada {
+    background-image: url(../img/lemonnnn.png);
+    width: 200px;
+    height: 200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+
+
+.multiplicar .superposada {
+    mix-blend-mode: multiply;
+}
+
+.trama .superposada{
+    mix-blend-mode: screen;
+}
+
+.superposar .superposada{
+    mix-blend-mode:overlay;
+}
+
+.enfosquir .superposada{
+    mix-blend-mode:darken;
+}
+.aclarir .superposada{
+    mix-blend-mode: lighten;
+}
+
+.colormesfosc .superposada {
+    mix-blend-mode:color-dodge;
+}
+
+.colormesclar .superposada {
+    mix-blend-mode:color-burn;
+}
+
+.llumintensa .superposada {
+    mix-blend-mode:hard-light;
+}
+
+.llumsuau .superposada {
+    mix-blend-mode:soft-light;
+}
+
+.diferencia .superposada {
+    mix-blend-mode:difference;
+}
+
+.exclusio .superposada {
+    mix-blend-mode:exclusion;
+}
+.to .superposada {
+    mix-blend-mode:hue;
+}
+.saturacio .superposada {
+    mix-blend-mode:saturation;
+}
+
+.color .superposada {
+mix-blend-mode:color;
+}
+
+.lluminositat .superposada {
+    mix-blend-mode: luminosity;
+}
+
+
+/*Canvien els interruptors*/
+
+.interruptor {
+width: 40px;
+height: 25px;
+background: rgb(225, 201, 177);
+position: relative;
+border-radius: 12.5px;
+border: 3px solid rgb(231, 94, 160);
+margin: auto;
+top: 10px;
+
+}
+
+label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  margin: auto;
+  border-radius: 12.5px;
+  box-shadow: 5px 0 5px grey;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+
+}
+
+input[type=checkbox]{
+  visibility:hidden;
+}
+
+input[type=checkbox]:checked+label{
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: rgb(148, 33, 81);
+  position: absolute;
+  top: 0;
+  left: 15px;
+ box-shadow: -2px 0 2px grey;
+
+}
+
+/*Canvien els interruptors*/
+
+input[type=range]{
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-ms-track {
+    width: 100%;
+   cursor: pointer;
+}
+
+/* Anem fent apareixer els diferents elements */
+/* Fem apareixer la maneta */
+
+input[type="range"]::-webkit-slider-thumb {
+   border: 1px solid pink;
+   height: 36px;
+   width: 16px;
+   border-radius: 6px;
+   background: chocolate;
+   cursor: pointer;
+   margin-top: -10px;
+   box-shadow: 1px 1px 1px #000}
+
+/* Fem apareixer el carril */
+
+input[type=range]::-webkit-slider-runnable-track{
+  width: 50%;
+  height:8.4px;
+  cursor:pointer;
+  box-shadow:1px 1px 1px #000;
+  background-image: linear-gradient(160deg, #c4b8e1 0%, #681175 100%);
+  margin-top: 15px;
+  border-radius:1.3px;
+  border:0.2px solid #010101;
+}
+
+input[type=range]::-moz-slider-runnable-track{
+  width: 50%;
+  height:8.4px;
+  cursor:pointer;
+  box-shadow:1px 1px 1px #000;
+  background:#3071a9;
+  border-radius:1.3px;
+  border:0.2px solid #010101;
+}
+
+
+input[type=range]::-ms-slider-track{
+  width: 50%;
+  height:8.4px;
+  cursor:pointer;
+  box-shadow:1px 1px 1px #000;
+  background:#3071a9;
+  border-radius:1.3px;
+  border:0.2px solid #010101;
+}
